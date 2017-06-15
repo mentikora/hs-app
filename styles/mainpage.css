@@ -1,0 +1,103 @@
+body{
+  margin: 0;
+}
+
+
+/* section-video__button */
+/* https://github.com/codrops/ClickEffects/blob/master/css/component.css */
+.section-video__button{
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: blue;
+
+  position: relative;
+  margin: 1em;
+  padding: 0;
+  border: none;
+  color: #286aab;
+  font-size: 1.4em;
+  overflow: visible;
+  -webkit-transition: color 0.7s;
+  transition: color 0.7s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+  .section-video__button::before,
+  .section-video__button::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -35px 0 0 -35px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .section-video__button::before{
+    box-shadow: 0 0 0 2px rgba(111,148,182,0.5);
+
+    -webkit-animation: anim-effect-ivana-1 2.5s infinite;
+    animation: anim-effect-ivana-1 2.5s infinite;
+  }
+  .section-video__button::after{
+    box-shadow: 0 0 0 2px rgba(111,148,182,0.5);
+    -webkit-animation: anim-effect-ivana-2 2.5s infinite;
+    animation: anim-effect-ivana-2 2.5s infinite;
+  }
+
+  @-webkit-keyframes anim-effect-ivana-1 {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.5, 0.5, 1);
+      transform: scale3d(0.5, 0.5, 1);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale3d(1.1, 1.1, 1);
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+
+  @keyframes anim-effect-ivana-1 {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.5, 0.5, 1);
+      transform: scale3d(0.5, 0.5, 1);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale3d(1.1, 1.1, 1);
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+
+  @-webkit-keyframes anim-effect-ivana-2 {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.5, 0.5, 1);
+      transform: scale3d(0.5, 0.5, 1);
+    }
+    50%, 100% {
+      opacity: 0;
+      -webkit-transform: scale3d(1.2, 1.2, 1);
+      transform: scale3d(1.2, 1.2, 1);
+    }
+  }
+
+  @keyframes anim-effect-ivana-2 {
+    0% {
+      opacity: 1;
+      -webkit-transform: scale3d(0.5, 0.5, 1);
+      transform: scale3d(0.5, 0.5, 1);
+    }
+    50%, 100% {
+      opacity: 0;
+      -webkit-transform: scale3d(1.2, 1.2, 1);
+      transform: scale3d(1.2, 1.2, 1);
+    }
+  }
