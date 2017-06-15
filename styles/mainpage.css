@@ -1,5 +1,130 @@
 body{
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+main.mainpage-wrapper{
+  flex-grow: 1;
+  background-color: #4639a9;
+}
+
+/* bg's */
+.section-welcome,
+.section-video,
+.section-subscribe{
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.section-welcome{ 
+  background-image: url('images/section-welcome-bg.jpg');
+}
+.section-video{
+  background-image: url('images/section-video-bg.jpg');
+}
+.section-subscribe{
+  background-image: url('images/section-subscribe-bg.jpg');
+}
+
+/* logo */ 
+.logo{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Heading */ 
+.heading{
   margin: 0;
+  font-size: 35px;
+  line-height: 50px;
+  color: #fff;
+}
+
+/* 
+  Header
+*/ 
+header{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+  header .logo{
+    display: block;
+    margin-top: 12px;
+    float: left;
+  }
+  header .log-in-button{
+    display: block;
+    margin-right: 45px;
+    width: 130px;
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #4538a8;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px 0 rgba(40,43,49, .08);
+  }
+
+/*
+  Footer
+*/ 
+footer{
+  background-color: #4538a8;
+  color: #fff;
+}
+  footer .footer-content-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 100px;
+  }
+
+  footer .copyright{
+    font-size: 11px;
+  }
+  footer .socials{}
+
+/* 
+  section welcome 
+*/
+.section-welcome{}
+  .section-welcome .heading{
+    margin: 22px 0 30px;
+  }
+  .section-welcome__content .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .section-welcome__right img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+/*
+  section video
+*/ 
+.section-video{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 515px;
+  cursor: pointer;
 }
 
 
@@ -7,13 +132,13 @@ body{
 /* https://github.com/codrops/ClickEffects/blob/master/css/component.css */
 .section-video__button{
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background-color: blue;
+  background-color: #fff;
 
   position: relative;
-  margin: 1em;
+  margin-top: 55px;
   padding: 0;
   border: none;
   color: #286aab;
@@ -29,9 +154,9 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -35px 0 0 -35px;
-    width: 70px;
-    height: 70px;
+    margin: -65px 0 0 -65px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     content: '';
     opacity: 0;
@@ -39,13 +164,13 @@ body{
   }
 
   .section-video__button::before{
-    box-shadow: 0 0 0 2px rgba(111,148,182,0.5);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
 
     -webkit-animation: anim-effect-ivana-1 2.5s infinite;
     animation: anim-effect-ivana-1 2.5s infinite;
   }
   .section-video__button::after{
-    box-shadow: 0 0 0 2px rgba(111,148,182,0.5);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
     -webkit-animation: anim-effect-ivana-2 2.5s infinite;
     animation: anim-effect-ivana-2 2.5s infinite;
   }
@@ -100,4 +225,55 @@ body{
       -webkit-transform: scale3d(1.2, 1.2, 1);
       transform: scale3d(1.2, 1.2, 1);
     }
+  }
+
+/*
+  section subscribe
+*/ 
+.section-subscribe{
+  display: flex;
+  align-items: center;
+  min-height: 280px;
+}
+  .section-subscribe-content{
+    display: flex;
+    align-items: center;
+  }
+  .section-subscribe__text{
+    margin-top: 25px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+  }
+
+.subscribe-form{
+
+}
+.form{
+  display: flex;
+}
+.form .controller-style{
+  border: 0;
+  outline: 0;
+  height: 50px;
+  line-height: 50px;
+  
+  font-size: 17px;
+  text-decoration: none;
+  color: #4538a8;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px 0 rgba(40,43,49, .08);
+}
+  .form .controller-style-input{
+    flex-grow: 1;
+    padding-left: 20px;
+    color: #282b31;
+  }
+  .form .controller-style-button{
+    width: 170px;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
   }

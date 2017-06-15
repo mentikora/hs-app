@@ -5,29 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <title>Hot Spot</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/grid.css">
   <link rel="stylesheet" href="styles/mainpage.css">
 </head>
 <body>
   
-  <main>
+  <main class="mainpage-wrapper">
     
     <!-- section welcome -->
     <section class="section-welcome">
 
       <!-- header -->
-      <header class="header">
-        <a href="javascript:void(0);" class="logo">logo</a>
-        <a href="javascript:void(0);" class="log-in-button">log in</a>
+      <header class="header container">
+        <a href="javascript:void(0);" class="logo">HotSpot App</a>
+        <a href="javascript:void(0);" class="log-in-button">Log in</a>
       </header>   
 
       <div class="section-welcome__content">
-        <div class="section-welcome__left">
-          <img src="" alt="">
-          <h1 class="heading">heading 1</h1>
-          <a href="javascript:void(0);" class="section-welcome__appstore-link">appstore link</a>
-        </div>
-        <div class="section-welcome__right">
-          <img src="" alt="">
+        <div class="container">
+          <div class="section-welcome__left col-sm-offset-1">
+            <img src="img/hotspot-img.png" alt="">
+            <h1 class="heading">
+              HotSpot App. 
+              <br>
+              Best app for clubbers.
+            </h1>
+            <a href="javascript:void(0);" class="section-welcome__appstore-link">
+              <img src="img/appstore-img.png" alt="">
+            </a>
+          </div>
+          <div class="section-welcome__right">
+            <img src="img/phone-img.png" alt="">
+          </div>
         </div>
       </div>
 
@@ -35,27 +45,52 @@
     
     <!-- section video -->
     <section class="section-video">
-      <h2 class="heading">heading</h2>
+      <h2 class="heading">
+        Watch video tour
+      </h2>
       <div class="section-video__button"></div>
     </section>
 
     <!-- section subscribe -->
     <section class="section-subscribe">
-      <div class="section-subscribe__left">
-        <h2 class="heading">heading</h2>
-        <p class="section-subscribe__text">text</p>
-      </div>
-      <div class="section-subscribe__right">
-        form
+      <div class="container">
+        <div class="section-subscribe-content">
+          <div class="col-sm-6 section-subscribe__left">
+            <h2 class="heading">
+              Subscribe to our newsletter
+            </h2>
+            <p class="section-subscribe__text">
+              Subscribe to our weekly email packed with software
+              development tips and resources.
+            </p>
+          </div>
+          <div class="col-sm-6 section-subscribe__right">
+            <form action="" class="form subscribe-form">
+              <input type="email" placeholder="Your e-mail" class="controller-style controller-style-input">
+              <input type="submit" value="Subscribe" class="controller-style controller-style-button">
+            </form>
+          </div>
+        </div>
       </div>
     </section>
-    
-    <!-- footer -->
-    <footer>
-      footer
-    </footer>
+  </main> 
 
-  </main>
-
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content-wrapper">
+        <a href="javascript:void(0);" class="logo">HotSpotApp</a>
+        <div class="copyright">
+          &copy; HotSpot App, 2017
+        </div>
+        <div class="socials-wrapper">
+          socials
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
 </body>
 </html>
