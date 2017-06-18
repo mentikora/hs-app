@@ -12,6 +12,18 @@
 <body>
   
   <main class="mainpage-wrapper">
+
+    <!-- popup overflow -->
+    <div class="popup animated">
+      <div class="popup__content">
+        <div class="popup__close-button">
+          <img src="img/icon-close.svg" alt="close">
+        </div>
+        <video id="video" width="640" height="360" preload controls>
+          <source src="video/video.mp4" />
+        </video>
+      </div>
+    </div>
     
     <!-- section welcome -->
     <section class="section-welcome">
@@ -48,7 +60,9 @@
       <h2 class="heading">
         Watch video tour
       </h2>
-      <div class="section-video__button"></div>
+      <div class="section-video__button">
+        <img src="img/icon-play.svg" alt="">
+      </div>
     </section>
 
     <!-- section subscribe -->
@@ -84,7 +98,12 @@
           &copy; HotSpot App, 2017
         </div>
         <div class="socials-wrapper">
-          socials
+          <a href="javascript:void(0);">
+            <img src="img/icon-twitter.svg" alt="twitter">
+          </a>
+          <a href="javascript:void(0);">
+            <img src="img/icon-instagram.svg" alt="instagram">
+          </a>
         </div>
       </div>
     </div>
@@ -92,5 +111,18 @@
   
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+
+  <script>
+    let popup = document.querySelector('.popup');
+    document.querySelector('.section-video__button').addEventListener('click',
+      function(){
+        popup.classList.add('on');
+      }, false);
+    document.querySelector('.popup__close-button').addEventListener('click',
+      function(){
+        document.getElementById('video').pause();
+        popup.classList.remove('on');
+      }, false);
+  </script>
 </body>
 </html>
