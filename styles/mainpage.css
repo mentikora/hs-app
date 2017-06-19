@@ -152,7 +152,14 @@ header{
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 6px 12px 0 rgba(40,43,49, .08);
+    
+    -webkit-transition: all .25s;
+    transition: all .25s;
   }
+    header .log-in-button:hover{
+      background-color: #4538a8;
+      color: #fff;
+    }
   @media(min-width: 768px){
     header .log-in-button{
       margin-right: 45px;
@@ -325,7 +332,7 @@ footer{
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-  .section-video__button img{
+  .section-video__button svg{
     display: block;
     width: 28px;
     margin: 20px 0 0 24px;
@@ -333,6 +340,14 @@ footer{
   .section-video__button:hover{
     -webkit-transform: scale(.9);
     transform: scale(.9);
+
+    background-color: #6c61c4;
+  }
+  .section-video__button #icon-play{
+    fill: #6c61c4;
+  }
+  .section-video__button:hover #icon-play{
+    fill: #fff;
   }
   .section-video__button:hover::before,
   .section-video__button:hover::after{
@@ -520,7 +535,14 @@ footer{
     text-align: center;
     font-weight: 700;
     cursor: pointer;
+    
+    -webkit-transition: all .25s;
+    transition: all .25s;
   }
+    .form .controller-style-button:hover{
+      color: #fff;
+      background-color: #4538a8;
+    }
     @media(max-width: 505px){
       .form .controller-style-button{
         margin-left: auto;
